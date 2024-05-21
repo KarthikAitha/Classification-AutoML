@@ -17,7 +17,6 @@ def main():
         st.subheader("Modelling")
         chosen_target = st.selectbox('Choose the Target Column', df.columns)
         if st.button('Run Modelling'):
-                # Try running setup without silent=True to get more detailed errors
             setup(df, target=chosen_target)
             setup_df = pull()
             st.dataframe(setup_df)
